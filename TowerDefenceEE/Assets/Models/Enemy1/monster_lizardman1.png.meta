@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: dbc8af0327362f74fac64f89ce917c1c
+guid: 28ff61f668913b74f8995252aacddb50
 TextureImporter:
   fileIDToRecycleName:
-    21300000: FrondWalk1
-    21300002: FrondWalk2
-    21300004: FrondWalk3
-    21300006: LeftWalk1
+    21300000: frontWalk1
+    21300002: frontWalk2
+    21300004: frontWalk3
+    21300006: LeftWalk3
     21300008: LeftWalk2
-    21300010: LeftWalk3
+    21300010: LeftWalk1
     21300012: RightWalk1
     21300014: RightWalk2
     21300016: RightWalk3
@@ -96,101 +96,61 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FrondWalk1
+      name: frontWalk1
       rect:
         serializedVersion: 2
         x: 9
         y: 150
         width: 27
-        height: 45
+        height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22b89af0dff1159458337cb021d911ef
+      spriteID: 843f2b35fc3117e4184e1d8f66cfb2b5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FrondWalk2
+      name: frontWalk2
       rect:
         serializedVersion: 2
         x: 55
         y: 150
         width: 29
-        height: 46
+        height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f5787e51873e9a4e8e393d4ffd47d40
+      spriteID: a43811446667dfb4bbaf485b66e21e3f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FrondWalk3
+      name: frontWalk3
       rect:
         serializedVersion: 2
         x: 103
         y: 150
         width: 27
-        height: 45
+        height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 854e036a917dcb749ab1437c1017aebf
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LeftWalk1
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 100
-        width: 28
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 973050527e4f24c479bb5c292460275e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LeftWalk2
-      rect:
-        serializedVersion: 2
-        x: 53
-        y: 100
-        width: 28
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3899462d732106e4ba01ef168f2eb2e3
+      spriteID: 8f650e73a71cdb24ab20dc02d41d7f3b
       vertices: []
       indices: 
       edges: []
@@ -199,18 +159,58 @@ TextureImporter:
       name: LeftWalk3
       rect:
         serializedVersion: 2
-        x: 100
+        x: 11
         y: 100
-        width: 30
-        height: 44
+        width: 23
+        height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32281db2e2ffc274da2a06d5df277f8d
+      spriteID: 7f88d30de321a5e4b9e0a9d4d2266c00
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftWalk2
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 100
+        width: 23
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 699fbd11de0fd244c8bb51d5becabc68
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftWalk1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 100
+        width: 24
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab42d8a861644fd47a33dd849ff59a44
       vertices: []
       indices: 
       edges: []
@@ -219,18 +219,18 @@ TextureImporter:
       name: RightWalk1
       rect:
         serializedVersion: 2
-        x: 9
+        x: 10
         y: 50
-        width: 30
-        height: 44
+        width: 24
+        height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c50f2fcf55f174c41a2f2134d3c106dc
+      spriteID: 7bd4531aeb4ce3e4088ffd45cf462e08
       vertices: []
       indices: 
       edges: []
@@ -241,16 +241,16 @@ TextureImporter:
         serializedVersion: 2
         x: 58
         y: 50
-        width: 28
-        height: 45
+        width: 23
+        height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f19db127afc648428685ad4c8b31ae8
+      spriteID: d50c6cb32527a0b4c8e22f55cbf57ad4
       vertices: []
       indices: 
       edges: []
@@ -261,16 +261,16 @@ TextureImporter:
         serializedVersion: 2
         x: 105
         y: 50
-        width: 28
-        height: 44
+        width: 23
+        height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90892c98c82bf03408cbd8a1a5e6fb9a
+      spriteID: 688304b47d0614a4f9c9c4d427a2261d
       vertices: []
       indices: 
       edges: []
@@ -282,15 +282,15 @@ TextureImporter:
         x: 9
         y: 0
         width: 27
-        height: 45
+        height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6edb387f338f36d488937a53d0dd7dc5
+      spriteID: 518fc65ef204bc24e8001ae0e239c5eb
       vertices: []
       indices: 
       edges: []
@@ -302,15 +302,15 @@ TextureImporter:
         x: 55
         y: 0
         width: 29
-        height: 46
+        height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4996daca232c2de42bc474fe5bc64ef7
+      spriteID: 20b4a6b08a1060b49904da862306de7d
       vertices: []
       indices: 
       edges: []
@@ -322,15 +322,15 @@ TextureImporter:
         x: 103
         y: 0
         width: 27
-        height: 45
+        height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f8d4e4b1636ca846b916707fe0f8e71
+      spriteID: bfc4b30e33ad9fe42a133554a9961bf8
       vertices: []
       indices: 
       edges: []
@@ -338,7 +338,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: d128fc4c6ea10734283349b46eea23e5
+    spriteID: d330eb84a18d2f2409c7675dba6fa14a
     vertices: []
     indices: 
     edges: []
