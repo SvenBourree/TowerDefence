@@ -12,7 +12,9 @@ public class GameManager : MonoBehaviour
     public int totalEnemies; //how many enemies in the wave
     public int enemiesPerSpawn; //how many spawn per time
 
+
     private int enemiesOnScreen; //how many are there now
+    const float spawnDelay = 0.5f; //every half second enemy spawns
     
 
 
@@ -36,8 +38,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        EnemySpawn();
-
+        StartCoroutine(EnemySpawner());
         
     }
 
@@ -56,6 +57,26 @@ public class GameManager : MonoBehaviour
                     enemiesOnScreen += 1;
                 }
             }
+        }
+    }
+
+    IEnumerator EnemySpawner()
+    {
+        if (enemiesPerSpawn > 0 && enemiesOnScreen < totalEnemies)
+        {
+            for (int i = 0; i < enemiesPerSpawn; i++)
+            {
+                if (enemiesOnScreen < maxEnemiesOnScreen)
+                {
+                    // needs to be cast as gameobject because Instantiate creates an object not a Gameobject
+                    GameObject newEnemy = Instantiate(enemies[0]) as GameObject;
+
+                    newEnemy.transform.position = spawnPoint.transform.position;
+                    enemiesOnScreen += 1;
+                }
+            }
+            yield return new WaitForSeconds(spawnDelay);
+            StartCoroutine(EnemySpawner());
         }
     }
 

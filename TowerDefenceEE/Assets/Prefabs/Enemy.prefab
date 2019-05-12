@@ -170,4 +170,4 @@ MonoBehaviour:
   - {fileID: 7143147859982654537, guid: ea4f58f6ff9dc414e98a16047da8dc11, type: 3}
   - {fileID: 7880018819591971773, guid: e983d9a467d369d4aab979aa22bce4c2, type: 3}
   - {fileID: 3927893276275819371, guid: eb3cfc75fa130ed4686c0dc80bb8cb65, type: 3}
-  navUpdate: 1
+  navUpdate: 0.01
