@@ -48,7 +48,7 @@ public class EnemyScript : MonoBehaviour
         }
         else if (collision.tag== "Finish")
         {
-            GameManager.instance.EnemyReachedEnd();
+            GameManager.Instance.EnemyReachedEnd();
             Destroy(gameObject);
         }
     }
