@@ -42,11 +42,11 @@ public class EnemyScript : MonoBehaviour
     //make this 2D, it wont otherwise you big dumb dumb
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag=="WayPoint")
+        if (collision.tag=="WayPoints")
         {
             target += 1;
         }
-        else if (collision.tag== "Finnish")
+        else if (collision.tag== "Finish")
         {
             GameManager.instance.EnemyReachedEnd();
             Destroy(gameObject);
