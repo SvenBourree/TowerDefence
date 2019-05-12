@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public int enemiesPerSpawn; //how many spawn per time
 
     private int enemiesOnScreen; //how many are there now
+    
 
 
     void Awake()
@@ -36,10 +37,11 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         EnemySpawn();
+
         
     }
 
-    void EnemySpawn()
+    public void EnemySpawn()
     {
         if (enemiesPerSpawn >0 && enemiesOnScreen<totalEnemies)
         {
@@ -54,6 +56,14 @@ public class GameManager : MonoBehaviour
                     enemiesOnScreen += 1;
                 }
             }
+        }
+    }
+
+    public void EnemyReachedEnd()
+    {
+        if (enemiesOnScreen>0)
+        {
+            enemiesOnScreen -= 1;
         }
     }
    
