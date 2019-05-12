@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
 
-
+    
     public GameObject spawnPoint;
     public GameObject[] enemies; //currentely doesnt need to be an array because only 1 enemy
     public int maxEnemiesOnScreen; // how many on the screen
