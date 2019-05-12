@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
 
-    public static GameManager instance = null; //crates a single instance of gamemanager
+
     public GameObject spawnPoint;
     public GameObject[] enemies; //currentely doesnt need to be an array because only 1 enemy
     public int maxEnemiesOnScreen; // how many on the screen
@@ -18,22 +18,6 @@ public class GameManager : MonoBehaviour
     
 
 
-    void Awake()
-    {
-       
-        if (instance==null)
-        {
-            instance = this;
-        }
-        else if (instance!=this)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            DontDestroyOnLoad(gameObject);
-        }
-    }
 
     // Start is called before the first frame update
     void Start()
