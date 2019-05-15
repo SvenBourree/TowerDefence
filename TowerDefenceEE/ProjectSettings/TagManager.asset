@@ -9,6 +9,7 @@ TagManager:
   - BuildSpot
   - Ground
   - Tower
+  - NoMoreBuildingHere
   layers:
   - Default
   - TransparentFX
@@ -46,6 +47,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: items
+  - name: Items
     uniqueID: 1344941387
+    locked: 0
+  - name: Units
+    uniqueID: 2977699779
     locked: 0

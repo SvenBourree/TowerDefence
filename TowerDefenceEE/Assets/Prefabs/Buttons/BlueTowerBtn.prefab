@@ -223,3 +223,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 3210065659631175566, guid: 3fc1174523c87f440a54f515ebda3f29, type: 3}
+  dragTower: {fileID: 21300002, guid: 037abfe36b6a7654589c08b6dcb3fc3e, type: 3}

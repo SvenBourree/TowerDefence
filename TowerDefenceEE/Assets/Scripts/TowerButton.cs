@@ -6,6 +6,8 @@ public class TowerButton : MonoBehaviour
 {
     [SerializeField]
     private GameObject tower;
+    [SerializeField]
+    private Sprite dragTower;
 
     public GameObject Tower
     {
@@ -13,6 +15,15 @@ public class TowerButton : MonoBehaviour
         {
             return tower;
         }
+    }
+
+    public Sprite DragTower
+    {
+        get
+        {
+            return dragTower;
+        }
+    
     }
    
 }

@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 1320356313200834868, guid: 43aae45b4dda6f243bef6eb06764adcc, type: 3}
+  dragTower: {fileID: 21300008, guid: 037abfe36b6a7654589c08b6dcb3fc3e, type: 3}
 --- !u!1 &7781038457616206674
 GameObject:
   m_ObjectHideFlags: 0
