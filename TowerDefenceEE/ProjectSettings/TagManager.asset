@@ -6,6 +6,10 @@ TagManager:
   tags:
   - WayPoints
   - Enemy
+  - BuildSpot
+  - Ground
+  - Tower
+  - NoMoreBuildingHere
   layers:
   - Default
   - TransparentFX
@@ -42,4 +46,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Items
+    uniqueID: 1344941387
+    locked: 0
+  - name: Units
+    uniqueID: 2977699779
     locked: 0
