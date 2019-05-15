@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 5337382387912661900}
   - component: {fileID: 2365860689231851674}
   - component: {fileID: 7538915487293419865}
-  m_Layer: 0
+  - component: {fileID: 7306769849413769891}
+  m_Layer: 8
   m_Name: redProjectile
-  m_TagString: Untagged
+  m_TagString: Projectiles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66,8 +67,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1344941387
+  m_SortingLayer: 1
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300098, guid: 037abfe36b6a7654589c08b6dcb3fc3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -96,3 +97,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.05}
   serializedVersion: 2
   m_Radius: 0.15
+--- !u!114 &7306769849413769891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3871704556729092243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e6d4d05e36fad44589adb6ce70ad9e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackStrenght: 5
+  projectileType: 1

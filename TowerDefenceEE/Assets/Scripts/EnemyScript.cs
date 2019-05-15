@@ -16,6 +16,7 @@ public class EnemyScript : MonoBehaviour
     void Start()
     {
         enemy = GetComponent<Transform>();
+        GameManager.Instance.RegistEnemy(this);
     }
 
     // Update is called once per frame
@@ -48,8 +49,8 @@ public class EnemyScript : MonoBehaviour
         }
         else if (collision.tag== "Finish")
         {
-            GameManager.Instance.EnemyReachedEnd();
-            Destroy(gameObject);
+            GameManager.Instance.UnRegisterEnemy(this);
+            
         }
     }
 
