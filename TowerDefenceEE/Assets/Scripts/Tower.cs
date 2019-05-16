@@ -8,21 +8,106 @@ public class Tower : MonoBehaviour
     private float timeBetweenShots;
     [SerializeField]
     private float shotRadius;
-
+    [SerializeField]
     private Projectiles projectile;
+
     private EnemyScript targetEnemy = null;
-    private float attackCounter;
+    private float attackCounter; // delay between shots fired
+    private bool isAttacking = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        attackCounter -= Time.deltaTime;
+        if (targetEnemy == null)
+        {
+            EnemyScript closestEnemy = GetClosestEnemy();
+
+            if (closestEnemy != null && Vector2.Distance(transform.localPosition, closestEnemy.transform.localPosition) <= shotRadius)
+            {
+                targetEnemy = closestEnemy;
+            }
+        }
+
+        else
+        {
+            if (attackCounter <= 0)
+            {
+                isAttacking = true;
+                attackCounter = timeBetweenShots;
+            }
+            else
+            {
+                isAttacking = false;
+            }
+            if (Vector2.Distance(transform.localPosition, targetEnemy.transform.localPosition) > shotRadius)
+            {
+                targetEnemy = null;
+            }
+        }
+
+    }
+
+    private void FixedUpdate()
+    {
+        if (isAttacking)
+        {
+            Attack();
+        }
+    }
+
+    public void Attack()
+    {
+        isAttacking = false;
+        Projectiles newProjectile = Instantiate(projectile) as Projectiles;
+        newProjectile.transform.localPosition = transform.localPosition;
+        if (targetEnemy = null)
+        {
+            Destroy(newProjectile);
+        }
+        else
+        {
+            //projectile goes to enemy
+            StartCoroutine(ProjectileMovement(newProjectile));
+        }
+    }
+
+    IEnumerator ProjectileMovement(Projectiles projectile)
+    {
+        while (TargetDistance(targetEnemy) > 0.20f && projectile != null && targetEnemy != null)
+        {
+            var direction = targetEnemy.transform.localPosition - transform.localPosition;
+            var directionAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+            projectile.transform.rotation = Quaternion.AngleAxis(directionAngle, Vector3.forward);
+            projectile.transform.localPosition = Vector2.MoveTowards(projectile.transform.localPosition, targetEnemy.transform.localPosition, 5f * Time.deltaTime);
+            yield return null;
+        }
+        if (projectile != null || targetEnemy == null)
+        {
+            Destroy(projectile);
+        }
+    }
+
+    private float TargetDistance(EnemyScript enemy)
+    {
+        if (enemy == null)
+        {
+            enemy = GetClosestEnemy();
+            if (enemy == null)
+            {
+                return 0f;
+            }
+        }
+
+        return Mathf.Abs(Vector2.Distance(transform.localPosition, enemy.transform.localPosition));
+
     }
 
     private List<EnemyScript> GetAllEnemy()
@@ -30,7 +115,7 @@ public class Tower : MonoBehaviour
         List<EnemyScript> enemiesInRange = new List<EnemyScript>();
         foreach (EnemyScript enemy in GameManager.Instance.EnemyList)
         {
-            if (Vector2.Distance(transform.position, enemy.transform.position)<= shotRadius)
+            if (Vector2.Distance(transform.localPosition, enemy.transform.localPosition) <= shotRadius)
             {
                 enemiesInRange.Add(enemy);
             }
@@ -45,9 +130,9 @@ public class Tower : MonoBehaviour
 
         foreach (EnemyScript enemy in GetAllEnemy())
         {
-            if (Vector2.Distance(transform.position, enemy.transform.position)<smallestDistance)
+            if (Vector2.Distance(transform.localPosition, enemy.transform.localPosition) < smallestDistance)
             {
-                smallestDistance = Vector2.Distance(transform.position, enemy.transform.position);
+                smallestDistance = Vector2.Distance(transform.localPosition, enemy.transform.localPosition);
                 closestEnemy = enemy;
             }
         }
