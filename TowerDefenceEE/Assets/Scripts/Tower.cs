@@ -37,7 +37,7 @@ public class Tower : MonoBehaviour
 
         else
         {
-            if (attackCounter <= 0)
+            if (attackCounter <= 0f)
             {
                 isAttacking = true;
                 attackCounter = timeBetweenShots;
@@ -81,13 +81,13 @@ public class Tower : MonoBehaviour
 
     IEnumerator ProjectileMovement(Projectiles projectile)
     {
-        while (TargetDistance(targetEnemy) > 0.20f && projectile != null && targetEnemy != null)
+        while (getTargetDistance(targetEnemy) > 0.20f && projectile != null && targetEnemy != null)
         {
             var direction = targetEnemy.transform.localPosition - transform.localPosition;
             var directionAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
             projectile.transform.rotation = Quaternion.AngleAxis(directionAngle, Vector3.forward);
-            projectile.transform.localPosition = Vector2.MoveTowards(projectile.transform.localPosition, targetEnemy.transform.localPosition, 5f * Time.deltaTime);
+            projectile.transform.localPosition = Vector2.MoveTowards(projectile.transform.localPosition, targetEnemy.transform.localPosition, 15f * Time.deltaTime);
             yield return null;
         }
         if (projectile != null || targetEnemy == null)
@@ -96,7 +96,7 @@ public class Tower : MonoBehaviour
         }
     }
 
-    private float TargetDistance(EnemyScript enemy)
+    private float getTargetDistance(EnemyScript enemy)
     {
         if (enemy == null)
         {
@@ -111,7 +111,7 @@ public class Tower : MonoBehaviour
 
     }
 
-    private List<EnemyScript> GetAllEnemy()
+    private List<EnemyScript> GetAllEnemyInRange()
     {
         List<EnemyScript> enemiesInRange = new List<EnemyScript>();
         foreach (EnemyScript enemy in GameManager.Instance.EnemyList)
@@ -129,7 +129,7 @@ public class Tower : MonoBehaviour
         EnemyScript closestEnemy = null;
         float smallestDistance = float.PositiveInfinity;
 
-        foreach (EnemyScript enemy in GetAllEnemy())
+        foreach (EnemyScript enemy in GetAllEnemyInRange())
         {
             if (Vector2.Distance(transform.localPosition, enemy.transform.localPosition) < smallestDistance)
             {

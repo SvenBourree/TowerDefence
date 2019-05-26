@@ -40,7 +40,7 @@ public class EnemyScript : MonoBehaviour
             }
         }
     }
-    //make this 2D, it wont otherwise you big dumb dumb
+    //make this 2D, it wont work otherwise you big dumb dumb
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag=="WayPoints")
@@ -51,6 +51,10 @@ public class EnemyScript : MonoBehaviour
         {
             GameManager.Instance.UnRegisterEnemy(this);
             
+        }
+        else if (collision.tag == "Projectiles")
+        {
+            Destroy(collision.gameObject);
         }
     }
 
