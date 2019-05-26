@@ -15,6 +15,8 @@ public class Tower : MonoBehaviour
     private float attackCounter; // delay between shots fired
     private bool isAttacking = false;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,7 @@ public class Tower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
         attackCounter -= Time.deltaTime;
         if (targetEnemy == null)
         {
@@ -87,7 +90,7 @@ public class Tower : MonoBehaviour
             var directionAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
             projectile.transform.rotation = Quaternion.AngleAxis(directionAngle, Vector3.forward);
-            projectile.transform.localPosition = Vector2.MoveTowards(projectile.transform.localPosition, targetEnemy.transform.localPosition, 15f * Time.deltaTime);
+            projectile.transform.localPosition = Vector2.MoveTowards(projectile.transform.localPosition, targetEnemy.transform.localPosition, 5f * Time.deltaTime);
             yield return null;
         }
         if (projectile != null || targetEnemy == null)
