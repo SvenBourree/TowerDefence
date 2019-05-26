@@ -71,7 +71,7 @@ public class Tower : MonoBehaviour
         isAttacking = false;
         Projectiles newProjectile = Instantiate(projectile) as Projectiles;
         newProjectile.transform.localPosition = transform.localPosition;
-        if (targetEnemy = null)
+        if (targetEnemy == null)
         {
             Destroy(newProjectile);
         }
