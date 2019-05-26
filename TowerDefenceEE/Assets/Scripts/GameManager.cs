@@ -48,7 +48,7 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    public void RegistEnemy(EnemyScript enemy)
+    public void RegisterEnemy(EnemyScript enemy)
     {
         EnemyList.Add(enemy);
     }

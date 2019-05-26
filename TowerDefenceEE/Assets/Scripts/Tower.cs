@@ -46,6 +46,7 @@ public class Tower : MonoBehaviour
             {
                 isAttacking = false;
             }
+
             if (Vector2.Distance(transform.localPosition, targetEnemy.transform.localPosition) > shotRadius)
             {
                 targetEnemy = null;
@@ -54,7 +55,7 @@ public class Tower : MonoBehaviour
 
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         if (isAttacking)
         {

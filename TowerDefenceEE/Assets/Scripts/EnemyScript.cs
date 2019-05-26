@@ -16,7 +16,7 @@ public class EnemyScript : MonoBehaviour
     void Start()
     {
         enemy = GetComponent<Transform>();
-        GameManager.Instance.RegistEnemy(this);
+        GameManager.Instance.RegisterEnemy(this);
     }
 
     // Update is called once per frame
