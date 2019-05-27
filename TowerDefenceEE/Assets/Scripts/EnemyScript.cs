@@ -5,24 +5,41 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour
 {
 
-    public int target = 0; //goes to checkpoint zero, checkpoints will be in array
-    public Transform exit; //stuff happens when enemy gets to this point
-    public Transform[] waypoints;
-    public float navUpdate;
+    [SerializeField]
+    private Transform exit; //stuff happens when enemy gets to this point
+    [SerializeField]
+    private Transform[] waypoints;
+    [SerializeField]
+    private float navUpdate;
+    [SerializeField]
+    private int hitPoints;
 
+    private int target = 0; //goes to checkpoint zero, checkpoints will be in array
     private Transform enemy;
+    private Collider2D enemyCollider;
     private float navTime = 0;
+    private bool isDead = false;
+
+    public bool Isdead
+    {
+        get
+        {
+            return isDead;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         enemy = GetComponent<Transform>();
+        enemyCollider = GetComponent<Collider2D>();
         GameManager.Instance.RegisterEnemy(this);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (waypoints!=null)
+        if (waypoints!=null && !isDead)
         {
             navTime += Time.deltaTime;
             if (navTime >navUpdate)
@@ -54,7 +71,31 @@ public class EnemyScript : MonoBehaviour
         }
         else if (collision.tag == "Projectiles")
         {
+           
+            Projectiles newProjectile = collision.gameObject.GetComponent<Projectiles>();
+            enemyHit(newProjectile.AttackStrength);
+            //this destroys the projectiles on impact
             Destroy(collision.gameObject);
+        }
+    }
+
+    public void dead()
+    {
+        isDead = true;
+        enemyCollider.enabled = false;
+        GameManager.Instance.UnRegisterEnemy(this);
+
+    }
+
+    public void enemyHit(int hp)
+    {
+        if (hitPoints - hp > 0 )            
+        {
+        hitPoints -= hp;
+        }
+        else
+        {
+            dead();
         }
     }
 
