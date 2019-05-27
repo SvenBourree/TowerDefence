@@ -37,7 +37,7 @@ public class GameManager : Singleton<GameManager>
                 if (EnemyList.Count < maxEnemiesOnScreen)
                 {
                     // needs to be cast as gameobject because Instantiate creates an object not a Gameobject
-                    GameObject newEnemy = Instantiate(enemies[1]) as GameObject;
+                    GameObject newEnemy = Instantiate(enemies[0]) as GameObject;
 
                     newEnemy.transform.position = spawnPoint.transform.position;
                     

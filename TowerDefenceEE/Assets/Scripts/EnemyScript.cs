@@ -84,6 +84,7 @@ public class EnemyScript : MonoBehaviour
         isDead = true;
         enemyCollider.enabled = false;
         GameManager.Instance.UnRegisterEnemy(this);
+        //to do: death animation
 
     }
 
