@@ -71,6 +71,14 @@ public class Tower : MonoBehaviour
         isAttacking = false;
         Projectiles newProjectile = Instantiate(projectile) as Projectiles;
         newProjectile.transform.localPosition = transform.localPosition;
+        if (newProjectile.ProjectileType == projectileType.redProjectile)
+        {
+            GameManager.Instance.AudioSource.PlayOneShot(SoundManager.Instance.Fire);
+        }
+        else if (newProjectile.ProjectileType == projectileType.blueProjectile)
+        {
+            GameManager.Instance.AudioSource.PlayOneShot(SoundManager.Instance.Water);
+        }
         if (targetEnemy == null)
         {
             Destroy(newProjectile);
