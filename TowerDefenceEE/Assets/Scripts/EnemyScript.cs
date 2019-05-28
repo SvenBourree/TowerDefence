@@ -92,6 +92,7 @@ public class EnemyScript : MonoBehaviour
         GameManager.Instance.TotalKilled += 1;
         GameManager.Instance.isWaveDone();
         GameManager.Instance.addMoney(reward);
+        GameManager.Instance.AudioSource.PlayOneShot(SoundManager.Instance.Death);
         //to do: death animation
 
     }
@@ -101,6 +102,7 @@ public class EnemyScript : MonoBehaviour
         if (hitPoints - hp > 0 )            
         {
         hitPoints -= hp;
+        
         }
         else
         {

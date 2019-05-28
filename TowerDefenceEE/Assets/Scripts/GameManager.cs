@@ -41,6 +41,7 @@ public class GameManager : Singleton<GameManager>
     private int totalKilled = 0;
     private int wichEnemiesToSpawn = 0;
     private gameStatus currentState = gameStatus.play;
+    private AudioSource audioSource;
 
 
     public List<EnemyScript> EnemyList = new List<EnemyScript>();
@@ -94,12 +95,19 @@ public class GameManager : Singleton<GameManager>
             totalKilled = value;
         }
     }
+    public AudioSource AudioSource
+    {
+        get
+        {
+            return audioSource;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         playButton.gameObject.SetActive(false);
-       
+        audioSource = GetComponent<AudioSource>();
         showMenu();
 
     }
