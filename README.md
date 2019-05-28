@@ -1,6 +1,12 @@
 # TowerDefence
 
-Assets bought from Humble bundle.
+Assets:
+
+enemies and towers: https://www.gamedevmarket.net/asset/monsters-time-fantasy-rpg-sprite-pack-4391/
+
+ground tiles: https://www.gamedevmarket.net/asset/2d-topdown-tile-set-6645/
+
+SFX: https://www.gamedevmarket.net/asset/magic-spells-sfx-bundle-3639/
 
 Made with Unity
 
@@ -8,4 +14,9 @@ Made with Unity
   Anna Laine for the support
   
  
-  Bob Ross for his soothing voice during programming
+  https://www.twitch.tv/bobross for his soothing voice during programming
+  
+  
+  https://www.youtube.com/quill18creates and  https://www.youtube.com/brackeys  for their clear tutorials on Unity
+  
+  
