@@ -170,4 +170,5 @@ MonoBehaviour:
   - {fileID: 7880018819591971773, guid: e983d9a467d369d4aab979aa22bce4c2, type: 3}
   - {fileID: 3927893276275819371, guid: eb3cfc75fa130ed4686c0dc80bb8cb65, type: 3}
   navUpdate: 0.01
-  hitPoints: 10
+  hitPoints: 5
+  reward: 5
