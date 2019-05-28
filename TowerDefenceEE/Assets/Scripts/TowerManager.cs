@@ -9,12 +9,17 @@ public class TowerManager : Singleton<TowerManager>
     public TowerButton towerButtonPressed { get; set; }
     private SpriteRenderer spriteRenderer;
 
-
+    private List<Tower> Towerlist = new List<Tower>();
+    private List<Collider2D> Buildlist = new List<Collider2D>();
+    private Collider2D buildTile;
 
     // Start is called before the first frame update
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        buildTile = GetComponent<Collider2D>();
+        spriteRenderer.enabled = false;
+
     }
 
     // Update is called once per frame
@@ -29,7 +34,9 @@ public class TowerManager : Singleton<TowerManager>
             RaycastHit2D hit = Physics2D.Raycast(mapPoint, Vector2.zero);
             if (hit.collider.tag == "BuildSpot")
             {
-                hit.collider.tag = "NoMoreBuildingHere";
+                buildTile = hit.collider;
+                buildTile.tag = "NoMoreBuildingHere";
+                registerBuildsite(buildTile);
                 placeTower(hit);
 
             }
@@ -43,11 +50,44 @@ public class TowerManager : Singleton<TowerManager>
 
     }
 
+    public void registerBuildsite(Collider2D tag)
+    {
+        Buildlist.Add(tag);
+    }
+
+    public void registerTower(Tower tower)
+    {
+        Towerlist.Add(tower);
+    }
+
+    public void renameBuildsiteTags()
+    {
+        foreach (Collider2D tag in Buildlist)
+        {
+            tag.tag = "Buildspot";
+        }
+        Buildlist.Clear();
+    }
+
+    public void destroyAllTowers()
+    {
+        foreach (Tower tower in Towerlist)
+        {
+            Destroy(tower.gameObject);
+        }
+        Towerlist.Clear();
+    }
+
+
     public void selectedTower(TowerButton towerSelected)
     {
-        towerButtonPressed = towerSelected;
-        enableDragTower(towerButtonPressed.DragTower);
-        Debug.Log(" you pressed " + towerButtonPressed.gameObject);
+        if (towerSelected.TowerPrice <= GameManager.Instance.TotalMoney)
+        {
+            towerButtonPressed = towerSelected;
+            enableDragTower(towerButtonPressed.DragTower);
+            // Debug.Log(" you pressed " + towerButtonPressed.gameObject);
+
+        }
     }
 
     public void placeTower(RaycastHit2D hit)
@@ -55,12 +95,19 @@ public class TowerManager : Singleton<TowerManager>
         //checks if you clic the UI (the buttons) because UI is not a game object
         if (!EventSystem.current.IsPointerOverGameObject() && towerButtonPressed != null)
         {
-            GameObject newTower = Instantiate(towerButtonPressed.Tower);
+            Tower newTower = Instantiate(towerButtonPressed.Tower);
             newTower.transform.position = hit.transform.position;
+            buyTower(towerButtonPressed.TowerPrice);
+            registerTower(newTower);
             disableDragTower();
 
 
         }
+    }
+
+    public void buyTower(int price)
+    {
+        GameManager.Instance.subtractMoney(price);
     }
 
     public void followCursor()

@@ -68,7 +68,10 @@ public class EnemyScript : MonoBehaviour
         }
         else if (collision.tag== "Finish")
         {
+            GameManager.Instance.WaveEscaped += 1;
+            GameManager.Instance.TotalEscaped += 1;
             GameManager.Instance.UnRegisterEnemy(this);
+            GameManager.Instance.isWaveDone();
             
         }
         else if (collision.tag == "Projectiles")
@@ -86,6 +89,9 @@ public class EnemyScript : MonoBehaviour
         isDead = true;
         enemyCollider.enabled = false;
         GameManager.Instance.UnRegisterEnemy(this);
+        GameManager.Instance.TotalKilled += 1;
+        GameManager.Instance.isWaveDone();
+        GameManager.Instance.addMoney(reward);
         //to do: death animation
 
     }
