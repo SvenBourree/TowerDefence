@@ -100,6 +100,7 @@ public class TowerManager : Singleton<TowerManager>
             buyTower(towerButtonPressed.TowerPrice);
             registerTower(newTower);
             disableDragTower();
+            towerButtonPressed = null;
 
 
         }
