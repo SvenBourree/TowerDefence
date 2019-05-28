@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class TowerManager : Singleton<TowerManager>
 {
 
-    private TowerButton towerButtonPressed;
+    public TowerButton towerButtonPressed { get; set; }
     private SpriteRenderer spriteRenderer;
 
 

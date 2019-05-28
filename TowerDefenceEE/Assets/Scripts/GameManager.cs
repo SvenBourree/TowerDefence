@@ -71,7 +71,12 @@ public class GameManager : Singleton<GameManager>
 
     }
 
- 
+    private void Update()
+    {
+        handleDeselectTower();
+    }
+
+
 
     IEnumerator EnemySpawner()
     {
@@ -145,5 +150,13 @@ public class GameManager : Singleton<GameManager>
         playButton.gameObject.SetActive(true);
     }
 
+    private void handleDeselectTower()
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            TowerManager.Instance.disableDragTower();
+            TowerManager.Instance.towerButtonPressed = null;
+        }
+    }
 
 }
