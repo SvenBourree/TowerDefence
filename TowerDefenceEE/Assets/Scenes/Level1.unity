@@ -4873,6 +4873,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 506654938977893069, guid: c74a1b74b6fac2e4a899665551a5993b,
+        type: 3}
+      propertyPath: lblTotalMoney
+      value: 
+      objectReference: {fileID: 772226068}
+    - target: {fileID: 506654938977893069, guid: c74a1b74b6fac2e4a899665551a5993b,
+        type: 3}
+      propertyPath: lblCurrentWave
+      value: 
+      objectReference: {fileID: 1812016049}
+    - target: {fileID: 506654938977893069, guid: c74a1b74b6fac2e4a899665551a5993b,
+        type: 3}
+      propertyPath: lblTotalEscaped
+      value: 
+      objectReference: {fileID: 221548860}
+    - target: {fileID: 506654938977893069, guid: c74a1b74b6fac2e4a899665551a5993b,
+        type: 3}
+      propertyPath: lblPlayButton
+      value: 
+      objectReference: {fileID: 2141416934}
+    - target: {fileID: 506654938977893069, guid: c74a1b74b6fac2e4a899665551a5993b,
+        type: 3}
+      propertyPath: playButton
+      value: 
+      objectReference: {fileID: 444432853}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c74a1b74b6fac2e4a899665551a5993b, type: 3}
 --- !u!4 &293111754 stripped

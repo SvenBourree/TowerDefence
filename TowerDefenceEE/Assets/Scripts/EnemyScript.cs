@@ -13,6 +13,8 @@ public class EnemyScript : MonoBehaviour
     private float navUpdate;
     [SerializeField]
     private int hitPoints;
+    [SerializeField]
+    private int reward;
 
     private int target = 0; //goes to checkpoint zero, checkpoints will be in array
     private Transform enemy;
