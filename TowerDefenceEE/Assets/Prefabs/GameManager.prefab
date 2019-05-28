@@ -47,21 +47,16 @@ MonoBehaviour:
   spawnPoint: {fileID: 3907032573564083540, guid: 4dd8364238755924dac2c7a677a7d12c,
     type: 3}
   enemies:
-  - {fileID: 4845461779166133260, guid: d6cf93abfc5d54746875bad0d7e14fee, type: 3}
-  - {fileID: 3952790944504375477, guid: fe7ca875a23b3424e83bb8b54c77c893, type: 3}
+  - {fileID: 5017956933406966682, guid: d6cf93abfc5d54746875bad0d7e14fee, type: 3}
+  - {fileID: 678927752880313851, guid: fe7ca875a23b3424e83bb8b54c77c893, type: 3}
   totalEnemies: 3
   enemiesPerSpawn: 1
   totalWaves: 10
-  lblTotalMoney: {fileID: 7685561363576614848, guid: b1e1102d60572fc4e97cfb4a60d26789,
-    type: 3}
-  lblCurrentWave: {fileID: 3210306449564455213, guid: bb735fdb265b88e41ae1aae6121de61e,
-    type: 3}
-  lblTotalEscaped: {fileID: 299111226113526748, guid: 8591a8da27c4b9c4780aec36cc3f34d0,
-    type: 3}
-  lblPlayButton: {fileID: 5215612909121665544, guid: 27f505ddd07161845b02d4a8814f170b,
-    type: 3}
-  playButton: {fileID: 4828756179398129283, guid: 694a8cd02615a0c40b7d79c95724cf7d,
-    type: 3}
+  lblTotalMoney: {fileID: 0}
+  lblCurrentWave: {fileID: 0}
+  lblTotalEscaped: {fileID: 0}
+  lblPlayButton: {fileID: 0}
+  playButton: {fileID: 0}
   EnemyList: []
 --- !u!82 &5171164432690905788
 AudioSource:

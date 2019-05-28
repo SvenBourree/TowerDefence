@@ -14,7 +14,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField]
     private GameObject spawnPoint;
     [SerializeField]
-    private GameObject[] enemies; 
+    private EnemyScript[] enemies; 
     
     [SerializeField]
     private int totalEnemies = 3; 
@@ -39,7 +39,7 @@ public class GameManager : Singleton<GameManager>
     private int totalEscaped = 0;
     private int waveEscaped = 0;
     private int totalKilled = 0;
-    private int wichEnemiesToSpawn = 0;
+    private int enemiesToSpawn = 0;
     private gameStatus currentState = gameStatus.play;
     private AudioSource audioSource;
 
@@ -128,7 +128,7 @@ public class GameManager : Singleton<GameManager>
                 if (EnemyList.Count < totalEnemies)
                 {
                     // needs to be cast as gameobject because Instantiate creates an object not a Gameobject
-                    GameObject newEnemy = Instantiate(enemies[0]) as GameObject;
+                    EnemyScript newEnemy = Instantiate(enemies[Random.Range(0,enemiesToSpawn)]) as EnemyScript;
 
                     newEnemy.transform.position = spawnPoint.transform.position;
                     
@@ -196,6 +196,10 @@ public class GameManager : Singleton<GameManager>
         lblTotalEscaped.text = $"Escaped {TotalEscaped}/10";
         if ((WaveEscaped+TotalKilled)==totalEnemies)
         {
+            if (waveNumber<=enemies.Length)
+            {
+                enemiesToSpawn = waveNumber;
+            }
             setCurrentGameState();
             showMenu();
         }
@@ -240,6 +244,7 @@ public class GameManager : Singleton<GameManager>
                 TowerManager.Instance.renameBuildsiteTags();
                 lblTotalMoney.text = TotalMoney.ToString();
                 lblTotalEscaped.text = $"Escaped {TotalEscaped}/10";
+                enemiesToSpawn = 0;
                 break;
         }
 
