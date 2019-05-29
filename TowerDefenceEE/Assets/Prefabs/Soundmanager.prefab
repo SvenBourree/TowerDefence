@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fire: {fileID: 8300000, guid: 9031b3d681475f647878dbe0327cb924, type: 3}
   water: {fileID: 8300000, guid: d821660e3f5be284c81dff97d403618b, type: 3}
+  venom: {fileID: 8300000, guid: 6f47e0ed63b90a64cbe846ade91f92f2, type: 3}
   death: {fileID: 8300000, guid: 5f9ec512c752b944891e7a0b6f5f47bd, type: 3}
 --- !u!82 &1018164808723908904
 AudioSource:

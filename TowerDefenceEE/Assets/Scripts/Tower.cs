@@ -79,6 +79,10 @@ public class Tower : MonoBehaviour
         {
             GameManager.Instance.AudioSource.PlayOneShot(SoundManager.Instance.Water);
         }
+        else if (newProjectile.ProjectileType==projectileType.greenProjectile)
+        {
+            GameManager.Instance.AudioSource.PlayOneShot(SoundManager.Instance.Venom);
+        }
         if (targetEnemy == null)
         {
             Destroy(newProjectile);
