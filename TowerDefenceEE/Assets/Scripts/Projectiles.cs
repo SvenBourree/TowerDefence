@@ -5,7 +5,7 @@ using UnityEngine;
 
 public enum projectileType
 {
-    blueProjectile, redProjectile
+    blueProjectile, redProjectile, greenProjectile, brownProjectile
 };
 
 public class Projectiles : MonoBehaviour
