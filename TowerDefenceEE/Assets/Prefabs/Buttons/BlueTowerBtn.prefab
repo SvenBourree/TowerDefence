@@ -197,7 +197,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8206744712470161823, guid: df084fec465a9374f96d36a53a2eb585,
+          type: 3}
         m_MethodName: selectedTower
         m_Mode: 2
         m_Arguments:
@@ -222,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ea0ef5e18c57b84bbcb3a6b1b7bb9ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tower: {fileID: 3210065659631175566, guid: 3fc1174523c87f440a54f515ebda3f29, type: 3}
+  tower: {fileID: 0}
   dragTower: {fileID: 21300002, guid: 037abfe36b6a7654589c08b6dcb3fc3e, type: 3}
   towerPrice: 30
 --- !u!1 &2487215173318719601
