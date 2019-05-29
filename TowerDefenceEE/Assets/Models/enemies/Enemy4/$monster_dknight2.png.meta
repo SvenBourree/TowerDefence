@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: 632de39c4c02d7d43b2158cd6c61836c
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: $monster_dknight2_0
+    21300002: $monster_dknight2_1
+    21300004: $monster_dknight2_2
+    21300006: $monster_dknight2_3
+    21300008: $monster_dknight2_4
+    21300010: $monster_dknight2_5
+    21300012: $monster_dknight2_6
+    21300014: $monster_dknight2_7
+    21300016: $monster_dknight2_8
+    21300018: $monster_dknight2_9
+    21300020: $monster_dknight2_10
+    21300022: $monster_dknight2_11
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -40,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,9 +81,260 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: $monster_dknight2_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 300
+        width: 68
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d80da2f9750ec1a4fa98459cbc6da034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: $monster_dknight2_1
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 300
+        width: 68
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffb9dd2c63a1b58419c22f14e7c0e402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: $monster_dknight2_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 300
+        width: 68
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b190f9bdb885dd428bb4b174bb281b7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: $monster_dknight2_3
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 200
+        width: 48
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4a819f72cda03c4780cc6b80213e9da
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: $monster_dknight2_4
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 200
+        width: 52
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9d5bd2097cd1334db0dd305ea22778c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: $monster_dknight2_5
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 200
+        width: 56
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e7185d0a51679458e7a4b8c5b05156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: $monster_dknight2_6
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 100
+        width: 56
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c03d991ef3809141ab1866f18328f48
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: $monster_dknight2_7
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 100
+        width: 52
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 966745ff93887c0439b3fcf7dd6d43ae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: $monster_dknight2_8
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 100
+        width: 48
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ae26e21371e81c4fbd7910a42e4a97f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: $monster_dknight2_9
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 0
+        width: 68
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83c0b22e8a61d149a8cec0c2deec409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: $monster_dknight2_10
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 0
+        width: 68
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb687106cf6437647a917e9110ae4979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: $monster_dknight2_11
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 68
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a23ec6112eb8448824b6630bff1598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
