@@ -114,9 +114,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6424d9d72b374442b71dad865bab8a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exit: {fileID: 0}
-  waypoints: []
-  navUpdate: 0
+  exit: {fileID: 687355766, guid: 302748e5d3d482e4fb72889719fe8888, type: 3}
+  waypoints:
+  - {fileID: 3949530929959655695, guid: beeb43e20dc8421449c91e5aa878a451, type: 3}
+  - {fileID: 8530958483799797155, guid: dfc45d7a5f01d9549a44815976f01a95, type: 3}
+  - {fileID: 4368387601839118780, guid: 91a6b5b4adcdca340847a6df6c905eba, type: 3}
+  - {fileID: 6896397154862613550, guid: e670c88bcf84291448331373ac6795bd, type: 3}
+  - {fileID: 5860851918683986175, guid: 294cee7d1f87f214db42c94a4f619306, type: 3}
+  - {fileID: 3767689802450544168, guid: 121e02356a877464081ea42636705c4e, type: 3}
+  - {fileID: 3005726276809715320, guid: 4d74f45f09e9beb4fbf7dc8d0c4182e9, type: 3}
+  - {fileID: 6377780388400839891, guid: 4d9eea5f2e881724fa6543fa55418730, type: 3}
+  navUpdate: 0.01
   hitPoints: 15
   reward: 13
 --- !u!61 &2119022582444390871
