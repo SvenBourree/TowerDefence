@@ -12,7 +12,7 @@ DeathSFX: https://bigsoundbank.com/detail-0477-wilhelm-scream.html
 
 Background music:  Jazzy Sax, Guitar, and Organ at the club by Admiral Bob (c) copyright 2018 Licensed under a Creative Commons Attribution (3.0) license. http://dig.ccmixter.org/files/admiralbob77/58382 Ft: geoffpeters
 
-Made with Unity
+Made with Unity 2018.3.5f1
 
 # Special thanks to:
 
